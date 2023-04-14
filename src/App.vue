@@ -23,6 +23,23 @@
       </div>
     </div>
     <router-view></router-view>
+    <div class="bg-[#ffd900] flex flex-col justify-center w-full items-center py-4 text-center">
+      <div class="flex gap-6">
+        <router-link to="/privacy">
+          <h5>Politica de Privacidad</h5>
+        </router-link>
+        <router-link to="/privacy">
+          <h5>Politica de Cookies</h5>
+        </router-link>
+        
+      </div>
+      <div class="w-full">
+        <router-link to="/privacy">
+          Copyrigth © 2023 by NewsBVB.
+          
+        </router-link>
+      </div>
+    </div>
   </div>
 </template>
 
