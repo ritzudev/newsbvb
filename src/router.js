@@ -14,9 +14,11 @@ const router = createRouter({
     //{ path: "/news", name: "News", component: News },
     { path: "/table", name: "Table", component: Table },
     { path: "/matches", name: "Matches", component: Matches },
-    { path: "/streaming", name: "Streaming", component: Streaming },
+    //{ path: "/streaming", name: "Streaming", component: Streaming },
     { path: "/privacy", name: "Privacy", component: Privacy },
+    
   ],
+  redirect: "/",
 });
 
 export default router;
