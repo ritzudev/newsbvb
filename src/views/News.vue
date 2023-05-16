@@ -1,24 +1,6 @@
 <template>
   <div class="bg-[#000e14]">
-    <!-- adsx -->
-    <ins
-      class="adsbygoogle"
-      style="display: block"
-      data-ad-client="ca-pub-9064611616693102"
-      data-ad-slot="3952386901"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
     <Cards :items="items" :loading="loading" :lines="lines" />
-    <!-- adsx -->
-    <ins
-      class="adsbygoogle"
-      style="display: block"
-      data-ad-client="ca-pub-9064611616693102"
-      data-ad-slot="3952386901"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
   </div>
 </template>
 
@@ -41,7 +23,6 @@ export default {
   },
   mounted() {
     this.getTitularE();
-    (adsbygoogle = window.adsbygoogle || []).push({});
   },
   methods: {
     reduceLineSize(index) {

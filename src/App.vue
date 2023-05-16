@@ -17,9 +17,9 @@
         />
         <h1>Fichajes</h1>
         <h1>Oficial</h1>
-        <!-- <router-link to="/streaming">
+        <router-link to="/streaming">
           <h1>Streaming</h1>
-        </router-link> -->
+        </router-link>
       </div>
     </div>
     <router-view></router-view>
