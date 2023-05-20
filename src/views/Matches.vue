@@ -14,7 +14,7 @@
           >
             <option
               class="h-20"
-              v-for="(item, index) in 32"
+              v-for="(item, index) in 34"
               :key="index"
               :value="item"
             >
