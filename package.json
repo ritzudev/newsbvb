@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "feather-icons": "^4.29.0",
     "iframe-resizer": "^4.3.6",
+    "volar-service-vetur": "^0.0.8",
     "vue": "^3.2.47",
     "vue-router": "4"
   },

@@ -1,16 +1,19 @@
 <template>
   <div class="bg-[#000e14]">
     <Cards :items="items" :loading="loading" :lines="lines" />
+    <!-- <CardsTwo :items="items" :loading="loading" :lines="lines" /> -->
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import Cards from "../components/Cards.vue";
+import CardsTwo from "../components/CardsTwo.vue";
 export default {
   name: "News",
   components: {
     Cards,
+    CardsTwo,
     //HelloWorld,
     //Usuarios
   },

@@ -124,7 +124,8 @@ export default {
     async getLeaderboard() {
       try {
         const response = await axios.get(
-          "https://kind-gold-agouti-tutu.cyclic.app/api/bvb/leaderboard"
+          /* "https://kind-gold-agouti-tutu.cyclic.app/api/bvb/leaderboard" */
+          "http://192.168.1.13:3000/api/bvb/leaderboard"
         );
         this.data = response.data;
         //console.log(this.data);

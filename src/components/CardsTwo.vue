@@ -3,7 +3,7 @@
     <div v-if="loading" class="w-full py-10 mx-auto max-w-7xl">
       <div
         role="status"
-        class="h-[480px] space-y-8  animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center border rounded shadow  md:p-6 dark:border-gray-700"
+        class="h-[480px] space-y-8 md:space-y-0 md:space-x-8 md:flex md:items-center border rounded shadow animate-pulse md:p-6 dark:border-gray-700"
       >
         <div
           class="flex items-center justify-center w-[65%] h-full bg-gray-300 rounded dark:bg-gray-700 overflow-hidden"
@@ -63,7 +63,7 @@
       <div class="flex justify-between py-8">
         <div
           role="status"
-          class="h-[320px] w-[630px] space-y-8  animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center border rounded shadow  md:p-6 dark:border-gray-700"
+          class="h-[320px] w-[630px] space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center border rounded shadow animate-pulse md:p-6 dark:border-gray-700"
         >
           <div
             class="flex items-center justify-center w-[50%] h-full bg-gray-300 rounded dark:bg-gray-700"
@@ -103,7 +103,7 @@
         </div>
         <div
           role="status"
-          class="h-[320px] w-[630px] space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center border rounded shadow  md:p-6 dark:border-gray-700"
+          class="h-[320px] w-[630px] space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center border rounded shadow animate-pulse md:p-6 dark:border-gray-700"
         >
           <div
             class="flex items-center justify-center w-[50%] h-full bg-gray-300 rounded dark:bg-gray-700"
@@ -143,8 +143,11 @@
         </div>
       </div>
     </div>
-    <!--  -->
-    <div v-else class="grid w-full grid-cols-4 gap-6 px-10 py-10 mx-auto text-white max-w-7xl font-mono">
+    <!-- ELSEEEEEEEEEE -->
+    <!-- <div
+      v-else
+      class="grid w-full grid-cols-4 gap-4 px-10 py-10 mx-auto text-white max-w-7xl"
+    >
       <div
         v-for="(item, index) in items"
         :key="index"
@@ -180,14 +183,14 @@
                   this.lines[index].lineSizeClass,
                 ]"
               ></span>
-              <span class="text-base text-white text-end"> {{ item.time }}</span>
+              <span class="text-base text-[#6f6b6b]"> {{ item.time }}</span>
             </div>
 
-            <div class="flex gap-3 flex-col">
-              <h1 :class="index === 0 ? 'text-3xl' : 'text-xl'" class=" font-semibold ellipsis">
+            <div>
+              <h1 class="text-xl font-semibold ellipsis">
                 {{ item.title }}
               </h1>
-              <p class="ellipsisdes text-sm">{{ item.description }}</p>
+              <p class="ellipsisdes">{{ item.description }}</p>
             </div>
 
             <div class="flex gap-4">
@@ -197,7 +200,37 @@
           </div>
         </div>
       </div>
+    </div> -->
+    <!--  -->
+
+    <!-- NEW COMPONENT -->
+    <div v-else class="max-w-7xl mx-auto bg">
+      <div
+        class="grid grid-cols-[repeat(autocover, minmax(200px,1fr))] gap-[2.5rem]"
+      >
+        <img
+          src="https://oneftbl-cms.imgix.net/https%3A%2F%2Fmibundesliga.com%2Fwp-content%2Fuploads%2F2023%2F06%2Fmexico-v-jamaica-concacaf-nations-league-scaled.jpg?auto=format%2Ccompress&crop=faces&dpr=2&fit=crop&h=348&q=25&w=620&s=b34cf85cd840aec4345d6d60982ed3d4"
+          alt=""
+        /><img
+          src="https://oneftbl-cms.imgix.net/https%3A%2F%2Ffutbolhoy.co%2Fwp-content%2Fuploads%2F2023%2F06%2FFy0v43OXoAcS9XN.jpg?auto=format%2Ccompress&crop=faces&dpr=2&fit=crop&h=224&q=25&w=336&s=85af80e4d0f57f310206c4757b5cb29b"
+          alt=""
+        /><img
+          src="https://onefootball.com/es/noticias/bellingham-candidato-al-golden-boy-37707943"
+          alt=""
+        /><img
+          src="https://image-service.onefootball.com/transform?w=400&h=267&dpr=2&image=https%3A%2F%2Fwp-images.onefootball.com%2Fwp-content%2Fuploads%2Fsites%2F12%2F2023%2F06%2FBorussia-Dortmund-v-AFC-Ajax-Group-C-UEFA-Champions-League-1687271357-1000x750.jpg"
+          alt=""
+        /><img
+          src="https://image-service.onefootball.com/transform?w=420&h=420&dpr=2&image=https%3A%2F%2Fwww.fcbarcelonanoticias.com%2Fuploads%2Fs1%2F13%2F67%2F40%2F6%2Fguendogan-en-la-concentracion-de-alemania.jpeg"
+          alt=""
+        /><img
+          src="https://image-service.onefootball.com/transform?w=400&h=267&dpr=2&image=https%3A%2F%2Fwp-images.onefootball.com%2Fwp-content%2Fuploads%2Fsites%2F12%2F2023%2F06%2FSao-Paulo-v-Palmeiras-Brasileirao-2023-1687182215-1000x750.jpg"
+          alt=""
+        />
+      </div>
     </div>
+
+    <!-- ----- -->
   </div>
 </template>
 
