@@ -29,16 +29,13 @@
             <span class="w-4">{{ index + 1 }}</span>
             <img
               v-if="
-                item.svg ===
-                  'https://onefootball.com/assets/images/arrow-up.svg' ||
-                item.svg ===
-                  'https://onefootball.com/assets/images/arrow-down.svg'
+                item.tend !== 'stable'
               "
               class="w-3 h-3"
-              :src="item.svg"
+              :src="item.tend === 'up' ? 'https://onefootball.com/assets/images/arrow-up.svg' : 'https://onefootball.com/assets/images/arrow-down.svg'"
               alt=""
             />
-            <span class="w-3 h-3" v-else></span>
+            <span class="w-3 h-3 border-[#b8b8b8] border-2 rounded-full" v-else></span>
             <img class="bg-fixed w-9" :src="item.image" alt="" />
             <h1 class="text-[#a5acb5]">{{ item.team }}</h1>
           </div>

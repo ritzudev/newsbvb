@@ -3,7 +3,7 @@
     <div class="grid grid-cols-1 gap-6 px-10 py-10 mx-auto max-w-7xl">
       <div class="text-white">
         <h1 class="text-5xl">{{ data.date }}</h1>
-        <h2>TEMPORADA 2022-2023</h2>
+        <h2>TEMPORADA 2023-2024</h2>
         <div class="flex items-center mt-4">
           <select
             name=""
