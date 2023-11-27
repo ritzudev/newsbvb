@@ -50,9 +50,9 @@
             <span class="w-7 text-[#888C90]">{{ item.draws }}</span>
             <span class="w-7 text-[#888C90]">{{ item.losses }}</span>
             <span
-              v-if="item.goald.charAt(0) !== '-'"
+              v-if="item.goald.charAt(0) === '+'"
               class="w-7 text-[#1fc779]"
-              >{{ "+" + item.goald }}</span
+              >{{ item.goald }}</span
             >
             <span v-else class="w-6 text-[#f42531]">{{ item.goald }}</span>
 
