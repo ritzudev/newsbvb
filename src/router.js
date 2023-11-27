@@ -8,6 +8,7 @@ import Privacy from "./views/Privacy.vue";
 
 
 const router = createRouter({
+  //mode:'history',
   history: createWebHistory(),
   routes: [
     { path: "/", name: "News", component: News },
