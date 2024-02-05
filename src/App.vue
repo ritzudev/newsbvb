@@ -1,11 +1,11 @@
 <template>
   <div id="app" class="min-w-[650px] bg-secondary">
-    <header class="font-mono">
+    <header class="sticky top-0 z-10 font-mono">
       <div
         class="w-full flex flex-row gap-6 justify-star py-1 bg-[#ffd900] items-center font-bold h-20 text-lg"
       >
         <img
-          class="w-16 h-16 ml-10"
+          class="ml-10 w-16 h-16"
           src="https://www.bvb.de/extension/bvbdesign/design/bvbdesign/images/layout/logo-bvb.svg"
           alt=""
         />
@@ -118,14 +118,14 @@
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
 
-import axios from "axios";
-import Cards from "./components/Cards.vue";
-import News from "./views/News.vue";
+import axios from 'axios'
+import Cards from './components/Cards.vue'
+import News from './views/News.vue'
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Cards,
-    News,
+    News
     //HelloWorld,
     //Usuarios
   },
@@ -134,7 +134,7 @@ export default {
       /* lines: [],
       items: [],
       loading: false, */
-    };
+    }
   },
   mounted() {
     //this.getTitularE();
@@ -170,8 +170,8 @@ export default {
         return console.log(error);
       }
     }, */
-  },
-};
+  }
+}
 </script>
 
 <style>

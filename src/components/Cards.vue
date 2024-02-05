@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div v-if="loading" class="w-full py-10 mx-auto max-w-7xl">
+    <div v-if="loading" class="py-10 mx-auto w-full max-w-7xl">
       <div
         role="status"
-        class="h-[480px] space-y-8  animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center border rounded shadow  md:p-6 dark:border-gray-700"
+        class="h-[480px] space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center border rounded shadow md:p-6 dark:border-gray-700"
       >
         <div
           class="flex items-center justify-center w-[65%] h-full bg-gray-300 rounded dark:bg-gray-700 overflow-hidden"
@@ -63,7 +63,7 @@
       <div class="flex justify-between py-8">
         <div
           role="status"
-          class="h-[320px] w-[630px] space-y-8  animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center border rounded shadow  md:p-6 dark:border-gray-700"
+          class="h-[320px] w-[630px] space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center border rounded shadow md:p-6 dark:border-gray-700"
         >
           <div
             class="flex items-center justify-center w-[50%] h-full bg-gray-300 rounded dark:bg-gray-700"
@@ -103,7 +103,7 @@
         </div>
         <div
           role="status"
-          class="h-[320px] w-[630px] space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center border rounded shadow  md:p-6 dark:border-gray-700"
+          class="h-[320px] w-[630px] space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center border rounded shadow md:p-6 dark:border-gray-700"
         >
           <div
             class="flex items-center justify-center w-[50%] h-full bg-gray-300 rounded dark:bg-gray-700"
@@ -144,7 +144,10 @@
       </div>
     </div>
     <!--  -->
-    <div v-else class="grid w-full grid-cols-4 gap-6 px-10 py-10 mx-auto text-white max-w-7xl font-mono">
+    <div
+      v-else
+      class="grid grid-cols-4 gap-6 py-10 px-10 mx-auto w-full max-w-7xl font-mono text-white"
+    >
       <div
         v-for="(item, index) in items"
         :key="index"
@@ -156,38 +159,43 @@
           class="flex w-full overflow-auto transition-all duration-[1600ms] bg-[#191e24] hover:shadow-2xl group px rounded-xl"
         >
           <div
-            class="h-full overflow-hidden"
+            class="overflow-hidden z-0 h-full"
             :class="[index === 0 ? 'w-[50%] md:w-[65%]' : 'w-[50%]']"
           >
             <img
-              class="w-full h-full transition-all group-hover:scale-125 duration-[1900ms]"
+              class="w-full h-full transition-all group-hover:scale-125 duration-[1900ms] object-cover"
               :src="item.image"
               alt=""
             />
           </div>
 
           <div
-            class="flex flex-col justify-between px-4 py-2"
+            class="flex flex-col justify-between py-2 px-4"
             :class="[index === 0 ? 'w-[50%] md:w-[35%]' : 'w-[50%]']"
           >
-            <div class="flex items-center justify-between">
+            <div class="flex justify-between items-center">
               <span
                 class="transition-all duration-1000"
                 :class="[
                   'bg-[#ffd900]',
                   'block',
                   'h-1',
-                  this.lines[index].lineSizeClass,
+                  this.lines[index].lineSizeClass
                 ]"
               ></span>
-              <span class="text-base text-white text-end"> {{ item.time }}</span>
+              <span class="text-base text-white text-end">
+                {{ item.time }}</span
+              >
             </div>
 
-            <div class="flex gap-3 flex-col">
-              <h1 :class="index === 0 ? 'text-3xl' : 'text-xl'" class=" font-semibold ellipsis">
+            <div class="flex flex-col gap-3">
+              <h1
+                :class="index === 0 ? 'text-3xl' : 'text-xl'"
+                class="font-semibold ellipsis"
+              >
                 {{ item.title }}
               </h1>
-              <p class="ellipsisdes text-sm">{{ item.description }}</p>
+              <p class="text-sm ellipsisdes">{{ item.description }}</p>
             </div>
 
             <div class="flex gap-4">
@@ -203,18 +211,18 @@
 
 <script>
 export default {
-  props: ["loading", "items", "lines"],
+  props: ['loading', 'items', 'lines'],
   data() {
-    return {};
+    return {}
   },
   methods: {
     reduceLineSize(index) {
-      this.lines[index].lineSizeClass = "w-0";
+      this.lines[index].lineSizeClass = 'w-0'
 
       setTimeout(() => {
-        this.lines[index].lineSizeClass = "w-24";
-      }, 800);
-    },
-  },
-};
+        this.lines[index].lineSizeClass = 'w-24'
+      }, 800)
+    }
+  }
+}
 </script>
